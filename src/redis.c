@@ -2817,7 +2817,7 @@ void redisOutOfMemoryHandler(size_t allocation_size) {
     redisPanic("OOM");
 }
 
-int main(int argc, char **argv) {
+int main1(int argc, char **argv) {
     struct timeval tv;
 
     /* We need to initialize our libraries, and the server configuration. */
@@ -2915,5 +2915,49 @@ int main(int argc, char **argv) {
     aeDeleteEventLoop(server.el);
     return 0;
 }
+#define NELEMS(x)  (sizeof(x) / sizeof(x[0]))
 
+int nodelevel(zskiplistNode *node){
+	int f ;int d ;
+	int size;
+	// 整体和部分不等，因为 ——字节对齐
+	size = sizeof(node->obj)+sizeof(node->score)+sizeof(node->backward);
+	size = sizeof(zskiplistNode);
+	// end 字节对齐
+	f = zmalloc_size(node)-size-sizeof(size_t); 	
+	
+	d = sizeof(struct zskiplistLevel);
+	return f/d;
+}
+void view(zskiplistNode *node){
+	// score
+	//printf("%d :",(int)node->score);
+	// level	
+	//printf("%d/%d:",(int)node->score,nodelevel(node));
+	printf("level size:%2d\n",nodelevel(node));
+}
+
+//zmalloc(sizeof(*zn)+level*sizeof(struct zskiplistLevel));
+
+
+int main(int argc, char **argv) {
+	//main1(argc,argv);
+	robj *obj1,*obj2,*obj3,*obj4,*obj5;
+	zskiplistNode *node;
+	zskiplist *zsl ;
+	obj1=obj2=obj3=obj4=obj5=NULL;
+	
+	zsl = zslCreate() ;
+	node= zslInsert1(zsl, 5, obj1,1);              //level=1;
+	view(node);
+	node=zslInsert1(zsl, 3, obj2,2);              //level=2;
+	view(node);
+	node=zslInsert1(zsl, 4, obj3,1);              //level=1;
+	view(node);
+	node=zslInsert1(zsl, 1, obj4,3);              //level=3;
+	view(node);
+	node=zslInsert1(zsl, 2, obj5,1);              //level=1;
+	view(node);
+	scanf("pause...");
+}
 /* The End */

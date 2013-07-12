@@ -984,6 +984,7 @@ typedef struct {
 zskiplist *zslCreate(void);
 void zslFree(zskiplist *zsl);
 zskiplistNode *zslInsert(zskiplist *zsl, double score, robj *obj);
+zskiplistNode *zslInsert1(zskiplist *zsl, double score, robj *obj,int level);
 unsigned char *zzlInsert(unsigned char *zl, robj *ele, double score);
 int zslDelete(zskiplist *zsl, double score, robj *obj);
 zskiplistNode *zslFirstInRange(zskiplist *zsl, zrangespec range);

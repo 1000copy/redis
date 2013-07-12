@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedisServer", "RedisServer.vcxproj", "{46842776-68A5-EC98-6A09-1859BBFC73AA}"
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedisServer", "RedisServer.vcxproj", "{06D08E1B-2844-68C1-22B3-BF77865DEB30}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hiredis", "hiredis\hiredis.vcxproj", "{13E85053-54B3-487B-8DDB-3430B1C1B3BF}"
 EndProject
@@ -29,14 +29,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Debug|Win32.ActiveCfg = Debug|Win32
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Debug|Win32.Build.0 = Debug|Win32
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Debug|x64.ActiveCfg = Debug|x64
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Debug|x64.Build.0 = Debug|x64
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Release|Win32.ActiveCfg = Release|Win32
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Release|Win32.Build.0 = Release|Win32
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Release|x64.ActiveCfg = Release|x64
-		{46842776-68A5-EC98-6A09-1859BBFC73AA}.Release|x64.Build.0 = Release|x64
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Debug|Win32.Build.0 = Debug|Win32
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Debug|x64.ActiveCfg = Debug|x64
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Debug|x64.Build.0 = Debug|x64
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Release|Win32.ActiveCfg = Release|Win32
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Release|Win32.Build.0 = Release|Win32
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Release|x64.ActiveCfg = Release|x64
+		{06D08E1B-2844-68C1-22B3-BF77865DEB30}.Release|x64.Build.0 = Release|x64
 		{13E85053-54B3-487B-8DDB-3430B1C1B3BF}.Debug|Win32.ActiveCfg = Debug|Win32
 		{13E85053-54B3-487B-8DDB-3430B1C1B3BF}.Debug|Win32.Build.0 = Debug|Win32
 		{13E85053-54B3-487B-8DDB-3430B1C1B3BF}.Debug|x64.ActiveCfg = Debug|x64
